@@ -1,17 +1,19 @@
 Package: wfaplot
-  Title: CREATE GGPLOT GRAPHICS IN WFA STYLE
-  Version: 0.1
-Authors@R: c(
-    person("Cian", "Sion", , "sionc1@cardiff.ac.uk", c("aut", "cre"))
-)
-  Description: Creates and exports ggplot charts using WFA (Wales Fiscal
-  Analysis) themeing and colour palettes.
-    Depends: R (>= 4.0.3)
-    Imports:
-    ggplot2,
-    png,
-    firatheme,
-    magickr
-    License: MIT
-  Encoding: UTF-8
-  LazyData: true
+Version: 0.1
+Date: 2021-02-08
+Title: Create ggplot graphics in WFA house style
+Authors@R: c(person("Cian", "Sion", role = c("aut", "cre"),
+                     email = "sionc1@cardiff.ac.uk"))
+Author: Cian Sion [aut, cre]
+Maintainer: Cian Sion <sionc1@cardiff.ac.uk>
+Depends: R (>= 4.0.0), nlme
+Suggests: MASS
+Imports: ggplot2,
+          png,
+          firatheme,
+          magick
+Description: Creates and exports ggplot charts using WFA themeing and colour palettes.
+License: MIT
+URL: https://www.github.com/ciantudur/wfaplot
+RoxygenNote: 7.1.1
+Encoding: UTF-8
