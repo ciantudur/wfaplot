@@ -69,7 +69,7 @@ export_chart <- function(chart_name, file_name, include_logo = c(T, F),
     
     plot_with_logo <- add_logo(
       plot_path = as.character(file_name),
-      logo_path = "wfalogo.png",
+      logo_path = "https://github.com/ciantudur/wfaplot/tree/main/Data/wfalogo.png",
       logo_position = "top right",
       logo_scale = 7.5)
     magick::image_write(plot_with_logo, as.character(file_name))
