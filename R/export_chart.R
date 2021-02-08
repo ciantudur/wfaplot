@@ -1,16 +1,10 @@
-## -------------------------------------------------------------------------- ##
-## WFAPLOT - EXPORT CHARTS AND ADD LOGO ------------------------------------- ##
-## -------------------------------------------------------------------------- ##
-## R/export_chart.R
-## 08 February 2021
-## Cian Sion (SionC1@cardiff.ac.uk)
-#' @keywords export_chart
-#' @export
-
-
-## REMARKS ---------------------------------------------------------------------
-# This script contains the functions for exporting the charts with and without
-# the WFA logo.
+#’ WFAPLOT COLOURS
+#’
+#’ This script contains the functions for exporting the charts with and without
+#’ the WFA logo
+#’
+#’
+#’ @export
 
 
 ## FUNCTION TO ADD LOGO --------------------------------------------------------
@@ -64,10 +58,10 @@ export_chart <- function(chart_name, file_name, include_logo = c(T, F),
       export_res <- 900
     } else {}
     
-    png(as.character(file_name), units = "in", width = export_width,
+    grDevices::png(as.character(file_name), units = "in", width = export_width,
         height = export_height, res = export_res) 
     plot(chart_name)
-    dev.off()
+    grDevices::dev.off()
     
     plot_with_logo <- add_logo(
       plot_path = as.character(file_name),
@@ -87,14 +81,14 @@ export_chart <- function(chart_name, file_name, include_logo = c(T, F),
     } else {}
     
     chart_name <- chart_name +
-      theme(
-        plot.title = element_blank(),
-        plot.subtitle = element_blank(),
-        plot.caption = element_blank())
+      ggplot2::theme(
+        plot.title = ggplot2::element_blank(),
+        plot.subtitle = ggplot2::element_blank(),
+        plot.caption = ggplot2::element_blank())
     
-    png(as.character(file_name), units = "in", width = export_width,
+    grDevices::png(as.character(file_name), units = "in", width = export_width,
         height = export_height, res = export_res) 
     plot(chart_name)
-    dev.off()
+    grDevices::dev.off()
   } 
 }

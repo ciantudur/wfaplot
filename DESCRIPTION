@@ -6,14 +6,14 @@ Authors@R: c(person("Cian", "Sion", role = c("aut", "cre"),
                      email = "sionc1@cardiff.ac.uk"))
 Author: Cian Sion [aut, cre]
 Maintainer: Cian Sion <sionc1@cardiff.ac.uk>
-Depends: R (>= 4.0.0), nlme
+Depends: R (>= 4.0.0)
 Suggests: MASS
 Imports: ggplot2,
           firatheme,
           magick,
           grDevices
 Description: Creates and exports ggplot charts using WFA themeing and colour palettes.
-License: MIT
+License: MIT + file LICENSE
 URL: https://www.github.com/ciantudur/wfaplot
 RoxygenNote: 7.1.1
 Encoding: UTF-8

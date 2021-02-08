@@ -1,30 +1,25 @@
-## -------------------------------------------------------------------------- ##
-## WFAPLOT - DEFINE COLOURS AND PALETTES ------------------------------------ ##
-## -------------------------------------------------------------------------- ##
-## R/colours.R
-## 08 February 2021
-## Cian Sion (SionC1@cardiff.ac.uk)
-#' @keywords colours
-#' @export
+#’ WFAPLOT COLOURS
+#’
+#’ This script defines the base colours and includes a function for these to be
+#’ used within wfaplot.
+#’
+#’
+#’ @export
 
-## REMARKS ---------------------------------------------------------------------
-# This script defines the base colours and includes a function for these to be
-# used within wfaplot.
-
-
-# Define base colours
-wfa_colors <- c(
-  `red`        = "#ce0538",
-  `yellow`     = "#f9d362",
-  `green`      = "#84e296",
-  `blue`       = "#1ac8ed",
-  `dark grey`  = "#373737",
-  `light grey` = "#cecece"
-)
 
 
 # Function to extract colours as hex codes
 wfa_cols <- function(...) {
+  
+  wfa_colors <- c(
+    `red`        = "#ce0538",
+    `yellow`     = "#f9d362",
+    `green`      = "#84e296",
+    `blue`       = "#1ac8ed",
+    `dark grey`  = "#373737",
+    `light grey` = "#cecece"
+  )
+  
   cols <- c(...)
   
   if (is.null(cols))
@@ -34,18 +29,17 @@ wfa_cols <- function(...) {
 }
 
 
-# Define color palettes
-wfa_palettes <- list(
-  `main`  = wfa_cols("red", "dark grey"),
-  
-  `grey` = wfa_cols("light grey", "dark grey"),
-  
-  `mixed` = wfa_cols("red", "yellow", "green", "blue")
-)
-
-
 # Return function to interpolate a WFA color palette
 wfa_pal <- function(palette = "main", reverse = FALSE, ...) {
+  
+  wfa_palettes <- list(
+    `main`  = wfa_cols("red", "dark grey"),
+    
+    `grey` = wfa_cols("light grey", "dark grey"),
+    
+    `mixed` = wfa_cols("red", "yellow", "green", "blue")
+  )
+  
   pal <- wfa_palettes[[palette]]
   
   if (reverse) pal <- rev(pal)
