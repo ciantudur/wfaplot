@@ -49,7 +49,7 @@ wfa_pal <- function(palette = "main", reverse = FALSE, ...) {
   
   if (reverse) pal <- rev(pal)
   
-  colorRampPalette(pal, ...)
+  grDevices::colorRampPalette(pal, ...)
 }
 
 
@@ -59,9 +59,9 @@ scale_color_wfa <- function(palette = "main", discrete = TRUE,
   pal <- wfa_pal(palette = palette, reverse = reverse)
   
   if (discrete) {
-    discrete_scale("colour", paste0("wfa_", palette), palette = pal, ...)
+    ggplot2::discrete_scale("colour", paste0("wfa_", palette), palette = pal, ...)
   } else {
-    scale_color_gradientn(colours = pal(256), ...)
+    ggplot2::scale_color_gradientn(colours = pal(256), ...)
   }
 }
 
@@ -72,9 +72,9 @@ scale_fill_wfa <- function(palette = "main", discrete = TRUE,
   pal <- wfa_pal(palette = palette, reverse = reverse)
   
   if (discrete) {
-    discrete_scale("fill", paste0("wfa_", palette), palette = pal, ...)
+    ggplot2::discrete_scale("fill", paste0("wfa_", palette), palette = pal, ...)
   } else {
-    scale_fill_gradientn(colours = pal(256), ...)
+    ggplot2::scale_fill_gradientn(colours = pal(256), ...)
   }
 }
 

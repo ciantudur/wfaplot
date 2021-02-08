@@ -12,7 +12,7 @@
 
 
 theme_wfa<- function(){
-  theme_minimal() %+replace%
+  ggplot2::theme_minimal() %+replace%
     theme(
       axis.text = element_text(
         color = "#373737",
