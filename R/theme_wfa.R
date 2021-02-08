@@ -12,7 +12,6 @@
 
 
 theme_wfa<- function(){
-  library(firatheme)
   theme_minimal() %+replace%
     theme(
       axis.text = element_text(

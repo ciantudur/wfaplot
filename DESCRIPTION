@@ -1,0 +1,17 @@
+Package: wfaplot
+  Title: CREATE GGPLOT GRAPHICS IN WFA STYLE
+  Version: 0.1
+Authors@R: c(
+    person("Cian", "Sion", , "sionc1@cardiff.ac.uk", c("aut", "cre"))
+)
+  Description: Creates and exports ggplot charts using WFA (Wales Fiscal
+  Analysis) themeing and colour palettes.
+    Depends: R (>= 4.0.3)
+    Imports:
+    ggplot2,
+    png,
+    firatheme,
+    magickr
+    License: MIT
+  Encoding: UTF-8
+  LazyData: true
