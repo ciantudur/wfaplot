@@ -9,9 +9,9 @@ Maintainer: Cian Sion <sionc1@cardiff.ac.uk>
 Depends: R (>= 4.0.0), nlme
 Suggests: MASS
 Imports: ggplot2,
-          png,
           firatheme,
-          magick
+          magick,
+          grDevices
 Description: Creates and exports ggplot charts using WFA themeing and colour palettes.
 License: MIT
 URL: https://www.github.com/ciantudur/wfaplot
