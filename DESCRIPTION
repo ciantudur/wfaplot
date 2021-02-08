@@ -7,7 +7,9 @@ Authors@R: c(person("Cian", "Sion", role = c("aut", "cre"),
 Author: Cian Sion [aut, cre]
 Maintainer: Cian Sion <sionc1@cardiff.ac.uk>
 Depends: R (>= 4.0.0)
-Suggests: MASS
+Suggests: 
+    MASS,
+    testthat (>= 3.0.0)
 Imports: ggplot2,
           firatheme,
           magick,
@@ -17,3 +19,4 @@ License: MIT + file LICENSE
 URL: https://www.github.com/ciantudur/wfaplot
 RoxygenNote: 7.1.1
 Encoding: UTF-8
+Config/testthat/edition: 3

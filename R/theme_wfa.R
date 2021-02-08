@@ -1,14 +1,16 @@
-#’ WFAPLOT COLOURS
-#’
-#’ This script contains the paramaters for theme_wfa() to be called when
-#’ generating ggplots.
-#’
-#’
-
-
-# ggplot theme paramaters
+#’------------------------------------------------------------------------------
+#’ WFAPLOT - THEME FOR GGPLOT
+#’ theme_wfa.R
+#’------------------------------------------------------------------------------
+#’ 
+#' @title theme_wfa
+#' @description This script contains the parameters for themeing ggplots in the
+#' WFA style.
+#’ 
 #' @export
-theme_wfa<- function(){
+
+
+theme_wfa <- function(){
   ggplot2::theme_minimal() +
     ggplot2::theme(
       axis.text = ggplot2::element_text(
@@ -39,5 +41,5 @@ theme_wfa<- function(){
         hjust = 0,
         face = "italic",
         family = "Fira Sans",
-      ), complete = T)
+      ), complete = F)
 }

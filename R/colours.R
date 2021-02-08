@@ -1,14 +1,11 @@
-#’ WFAPLOT COLOURS
+#’------------------------------------------------------------------------------
+#’ WFAPLOT - COLOURS
+#’ colours.R
+#’------------------------------------------------------------------------------
+#’ 
 #’
-#’ This script defines the base colours and includes a function for these to be
-#’ used within wfaplot.
-#’
-#’
-
-
-
-# Function to extract colours as hex codes
 #' @export
+
 wfa_cols <- function(...) {
   
   wfa_colors <- c(
@@ -29,8 +26,11 @@ wfa_cols <- function(...) {
 }
 
 
-# Return function to interpolate a WFA color palette
+#’------------------------------------------------------------------------------
+#’ 
+#’
 #' @export
+
 wfa_pal <- function(palette = "main", reverse = FALSE, ...) {
   
   wfa_palettes <- list(
@@ -49,22 +49,29 @@ wfa_pal <- function(palette = "main", reverse = FALSE, ...) {
 }
 
 
-# Color scale constructor for WFA colors
+#’------------------------------------------------------------------------------
+#’ 
+#’
 #' @export
+
 scale_color_wfa <- function(palette = "main", discrete = TRUE,
                             reverse = FALSE, ...) {
   pal <- wfa_pal(palette = palette, reverse = reverse)
   
   if (discrete) {
-    ggplot2::discrete_scale("colour", paste0("wfa_", palette), palette = pal, ...)
+    ggplot2::discrete_scale("colour", paste0("wfa_", palette),
+                            palette = pal, ...)
   } else {
     ggplot2::scale_color_gradientn(colours = pal(256), ...)
   }
 }
 
 
-# Fill scale constructor for WFA colors
+#’------------------------------------------------------------------------------
+#’ 
+#’
 #' @export
+
 scale_fill_wfa <- function(palette = "main", discrete = TRUE,
                            reverse = FALSE, ...) {
   pal <- wfa_pal(palette = palette, reverse = reverse)
@@ -75,4 +82,3 @@ scale_fill_wfa <- function(palette = "main", discrete = TRUE,
     ggplot2::scale_fill_gradientn(colours = pal(256), ...)
   }
 }
-
