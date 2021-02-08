@@ -4,6 +4,8 @@
 ## R/theme_wfa.R
 ## 08 February 2021
 ## Cian Sion (SionC1@cardiff.ac.uk)
+#' @keywords theme_wfa
+#' @export
 
 
 ## REMARKS ---------------------------------------------------------------------

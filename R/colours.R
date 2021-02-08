@@ -4,7 +4,8 @@
 ## R/colours.R
 ## 08 February 2021
 ## Cian Sion (SionC1@cardiff.ac.uk)
-
+#' @keywords colours
+#' @export
 
 ## REMARKS ---------------------------------------------------------------------
 # This script defines the base colours and includes a function for these to be

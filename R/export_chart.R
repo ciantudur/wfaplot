@@ -4,6 +4,8 @@
 ## R/export_chart.R
 ## 08 February 2021
 ## Cian Sion (SionC1@cardiff.ac.uk)
+#' @keywords export_chart
+#' @export
 
 
 ## REMARKS ---------------------------------------------------------------------
