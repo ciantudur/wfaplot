@@ -4,10 +4,10 @@
 #’ generating ggplots.
 #’
 #’
-#’ @export
 
 
 # ggplot theme paramaters
+#' @export
 theme_wfa<- function(){
   ggplot2::theme_minimal() +
     ggplot2::theme(

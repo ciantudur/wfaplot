@@ -4,10 +4,11 @@
 #’ the WFA logo
 #’
 #’
-#’ @export
+
 
 
 ## FUNCTION TO ADD LOGO --------------------------------------------------------
+#' @export
 add_logo <- function(plot_path, logo_path, logo_position, logo_scale = 10) {
   if (!logo_position %in% c(
     "top right", "top left",
@@ -44,6 +45,7 @@ add_logo <- function(plot_path, logo_path, logo_position, logo_scale = 10) {
 
 
 # Function to export chart
+#' @export
 export_chart <- function(chart_name, file_name, include_logo = c(T, F),
                          export_width = NULL, export_height = NULL,
                          export_res = NULL) { 

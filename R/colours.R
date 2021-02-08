@@ -4,11 +4,11 @@
 #’ used within wfaplot.
 #’
 #’
-#’ @export
 
 
 
 # Function to extract colours as hex codes
+#' @export
 wfa_cols <- function(...) {
   
   wfa_colors <- c(
@@ -30,6 +30,7 @@ wfa_cols <- function(...) {
 
 
 # Return function to interpolate a WFA color palette
+#' @export
 wfa_pal <- function(palette = "main", reverse = FALSE, ...) {
   
   wfa_palettes <- list(
@@ -49,6 +50,7 @@ wfa_pal <- function(palette = "main", reverse = FALSE, ...) {
 
 
 # Color scale constructor for WFA colors
+#' @export
 scale_color_wfa <- function(palette = "main", discrete = TRUE,
                             reverse = FALSE, ...) {
   pal <- wfa_pal(palette = palette, reverse = reverse)
@@ -62,6 +64,7 @@ scale_color_wfa <- function(palette = "main", discrete = TRUE,
 
 
 # Fill scale constructor for WFA colors
+#' @export
 scale_fill_wfa <- function(palette = "main", discrete = TRUE,
                            reverse = FALSE, ...) {
   pal <- wfa_pal(palette = palette, reverse = reverse)
