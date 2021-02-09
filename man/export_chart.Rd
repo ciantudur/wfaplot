@@ -16,17 +16,24 @@ export_chart(
 \arguments{
 \item{chart_name}{Name of ggplot object to export}
 
-\item{file_name}{File path for exporting}
+\item{file_name}{File path for exported chart}
 
-\item{include_logo}{Boolean value - include logo?}
+\item{include_logo}{Boolean value (include logo = T, no logo = F)}
 
-\item{export_width}{Width of exported chart *optional}
+\item{export_width}{Width of exported chart (in) *optional}
 
-\item{export_height}{Height of exported chart *optional}
+\item{export_height}{Height of exported chart (in) *optional}
 
-\item{export_res}{Resolution of exported chart *optional}
+\item{export_res}{Resolution of exported chart (dpi) *optional}
+}
+\value{
+ggplot chart saved as png in root directory
 }
 \description{
-This script contains the functions for exporting ggplot charts
-with and without the WFA logo.
+This function exports ggplot charts with and without the WFA
+logo.
+}
+\examples{
+export_chart(my_chart, "my_chart.png", TRUE)
+export_chart(my_chart, "my_chart.png", FALSE, 6, 2.5, 300)
 }
