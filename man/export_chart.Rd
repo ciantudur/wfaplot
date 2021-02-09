@@ -33,7 +33,13 @@ ggplot chart saved as png in root directory
 This function exports ggplot charts with and without the WFA
 logo.
 }
+\details{
+-----------------------------------------------------------------------------
+WFAPLOT - EXPORT CHARTS
+export_chart.R
+-----------------------------------------------------------------------------
+}
 \examples{
-export_chart(my_chart, "my_chart.png", TRUE)
-export_chart(my_chart, "my_chart.png", FALSE, 6, 2.5, 300)
+#export_chart(my_chart, "my_chart.png", TRUE)
+#export_chart(my_chart, "my_chart.png", FALSE, 6, 2.5, 300)
 }

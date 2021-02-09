@@ -1,26 +1,26 @@
-#’ -----------------------------------------------------------------------------
-#’ WFAPLOT - EXPORT CHARTS
-#’ export_chart.R
-#’ -----------------------------------------------------------------------------
-#’
+#' -----------------------------------------------------------------------------
+#' WFAPLOT - EXPORT CHARTS
+#' export_chart.R
+#' -----------------------------------------------------------------------------
+#'
 #' @title export_chart
 #' @description This function exports ggplot charts with and without the WFA
 #' logo.
 #'
 #' @export
-#’
+#'
 #' @param chart_name Name of ggplot object to export
 #' @param file_name File path for exported chart
 #' @param include_logo Boolean value (include logo = T, no logo = F)
 #' @param export_width Width of exported chart (in) *optional
 #' @param export_height Height of exported chart (in) *optional
 #' @param export_res Resolution of exported chart (dpi) *optional
-#’
+#'
 #' @return ggplot chart saved as png in root directory
 #'
 #' @examples
-#' export_chart(my_chart, "my_chart.png", TRUE)
-#' export_chart(my_chart, "my_chart.png", FALSE, 6, 2.5, 300)
+#' #export_chart(my_chart, "my_chart.png", TRUE)
+#' #export_chart(my_chart, "my_chart.png", FALSE, 6, 2.5, 300)
 
 
 export_chart <- function(chart_name, file_name, include_logo = c(T, F),

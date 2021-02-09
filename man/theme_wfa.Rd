@@ -14,7 +14,7 @@ This script contains the parameters for themeing ggplots in the
 WFA style.
 }
 \examples{
-ggplot2(data = my_data, aes(x = xval, y= yval)) +
-geom_line() +
-theme_wfa()
+#ggplot2(data = my_data, aes(x = xval, y= yval)) +
+#geom_line() +
+#theme_wfa()
 }

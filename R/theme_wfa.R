@@ -12,9 +12,9 @@
 #' @return ggplot theme objects
 #'
 #' @examples
-#' ggplot2(data = my_data, aes(x = xval, y= yval)) +
-#' geom_line() +
-#' theme_wfa()
+#' #ggplot2(data = my_data, aes(x = xval, y= yval)) +
+#' #geom_line() +
+#' #theme_wfa()
 
 
 theme_wfa <- function() {
@@ -25,7 +25,7 @@ theme_wfa <- function() {
         family = "Fira Sans"
       ),
       axis.text.x.bottom = ggplot2::element_text(
-        angle = 90,
+        angle = 0,
         hjust = 1,
         vjust = 0.5
       ),
