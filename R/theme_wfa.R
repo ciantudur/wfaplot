@@ -1,7 +1,7 @@
-#’ ------------------------------------------------------------------------------
+#’ -----------------------------------------------------------------------------
 #’ WFAPLOT - THEME FOR GGPLOT
 #’ theme_wfa.R
-#’ ------------------------------------------------------------------------------
+#’ -----------------------------------------------------------------------------
 #’
 #' @title theme_wfa
 #' @description This script contains the parameters for themeing ggplots in the
@@ -26,7 +26,7 @@ theme_wfa <- function() {
       ),
       axis.text.x.bottom = ggplot2::element_text(
         angle = 0,
-        hjust = 1,
+        hjust = 0.5,
         vjust = 0.5
       ),
       axis.title.y = ggplot2::element_text(
