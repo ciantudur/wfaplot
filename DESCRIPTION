@@ -11,7 +11,6 @@ Suggests:
     MASS,
     testthat (>= 3.0.0)
 Imports: ggplot2,
-          firatheme,
           magick,
           grDevices
 Description: Creates and exports ggplot charts using WFA themeing and colour palettes.
