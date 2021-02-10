@@ -46,6 +46,8 @@ theme_wfa <- function() {
         face = "plain",
         family = "Fira Sans",
         colour = "#373737"
-      ), ggtext::element_markdown(), complete = F
+      ), 
+      plot.caption = ggtext::element_markdown(),
+      complete = F
     )
 }
