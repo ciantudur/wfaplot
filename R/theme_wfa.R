@@ -35,7 +35,8 @@ theme_wfa <- function() {
         size = 8
       ),
       legend.title = ggplot2::element_blank(),
-      legend.text = ggplot2::element_text(family = "Fira Sans"),
+      legend.text = ggplot2::element_text(family = "Fira Sans",
+                                          color = "#5c5c5c"),
       plot.title = ggplot2::element_text(family = "Fira Sans Medium"),
       plot.subtitle = ggplot2::element_text(family = "Fira Sans",
                                             color = "#373737",
