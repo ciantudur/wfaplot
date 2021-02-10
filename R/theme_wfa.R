@@ -1,14 +1,14 @@
-#’ -----------------------------------------------------------------------------
-#’ WFAPLOT - THEME FOR GGPLOT
-#’ theme_wfa.R
-#’ -----------------------------------------------------------------------------
-#’
+#' -----------------------------------------------------------------------------
+#' WFAPLOT - THEME FOR GGPLOT
+#' theme_wfa.R
+#' -----------------------------------------------------------------------------
+#'
 #' @title theme_wfa
 #' @description This script contains the parameters for themeing ggplots in the
 #' WFA style.
 #'
 #' @export
-#’
+#'
 #' @return ggplot theme objects
 #'
 #' @examples
@@ -21,7 +21,7 @@ theme_wfa <- function() {
   ggplot2::theme_minimal() +
     ggplot2::theme(
       axis.text = ggplot2::element_text(
-        color = "#373737",
+        color = "#5c5c5c",
         family = "Fira Sans"
       ),
       axis.text.x.bottom = ggplot2::element_text(
@@ -29,13 +29,8 @@ theme_wfa <- function() {
         hjust = 0.5,
         vjust = 0.5
       ),
-      axis.title.y = ggplot2::element_text(
-        colour = "#373737",
-        family = "Fira Sans",
-        size = 8
-      ),
-      axis.title.x = ggplot2::element_text(
-        colour = "#373737",
+      axis.title = ggplot2::element_text(
+        colour = "#5c5c5c",
         family = "Fira Sans",
         size = 8
       ),
@@ -43,12 +38,14 @@ theme_wfa <- function() {
       legend.text = ggplot2::element_text(family = "Fira Sans"),
       plot.title = ggplot2::element_text(family = "Fira Sans Medium"),
       plot.subtitle = ggplot2::element_text(family = "Fira Sans",
-                                            color = "#373737"),
+                                            color = "#373737",
+                                            size = 10),
       plot.caption = ggplot2::element_text(
-        size = 8,
+        size = 6,
         hjust = 0,
-        face = "italic",
+        face = "plain",
         family = "Fira Sans",
-      ), complete = F
+        colour = "#373737"
+      ), ggtext::element_markdown(), complete = F
     )
 }
