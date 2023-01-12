@@ -24,6 +24,7 @@ install.packages("remotes")
 
 # Install wfaplot and dependencies from github
 remotes::install_github("ciantudur/wfaplot", dependencies = TRUE)
+
 # If prompted, press Enter to skip updates.
 
 library(wfaplot)
