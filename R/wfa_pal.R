@@ -53,11 +53,30 @@ wfa_pal <-
     if (palette %in% names(wfa_palettes) == FALSE) {
       message(paste0(
         "'", palette, "' ", "is not a valid colour palette. ",
-        "The options are 'main', 'grey', 'colourful', 'extra_colourful', and 'fuchsia'."
+        "The options are 'main', 'grey', 'colourful', 'extra_colourful', ",
+        "and 'fuchsia'."
       ))
     } else {
       pal <- wfa_palettes[[palette]]
       if (reverse) pal <- rev(pal)
-      grDevices::colorRampPalette(pal)
+
+      rampGenerator <- function(colors, ...) {
+        ramp <- grDevices::colorRamp(colors, ...)
+        function(n) {
+          if (n <= length(colors) &
+            n > 0) {
+            colors[1:n]
+          } else {
+            x <- ramp(seq.int(0, 1, length.out = n))
+            if (ncol(x) == 4L) {
+              rgb(x[, 1L], x[, 2L], x[, 3L], x[, 4L], maxColorValue = 255)
+            } else {
+              rgb(x[, 1L], x[, 2L], x[, 3L], maxColorValue = 255)
+            }
+          }
+        }
+      }
+
+      rampGenerator(pal)
     }
   }

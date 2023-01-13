@@ -11,9 +11,7 @@ This function checks if required fonts are installed and applies the WFA
 theme to a ggplot object.
 }
 \examples{
-\donttest{
 theme_wfa()
-}
 }
 \keyword{theme}
 \keyword{wfa}

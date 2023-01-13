@@ -5,12 +5,17 @@
 #' @keywords
 #' theme
 #' wfa
+#' @import
+#' showtext
+#' sysfonts
+#' ggplot2
+#' curl
+#' jsonlite
 #' @export
 #' @examples
 #' theme_wfa()
 theme_wfa <-
   function() {
-    require(curl)
     # Check if Fira Sans font is loaded, and add from Google if not
     if (("fira-sans" %in% sysfonts::font_families()) &
       ("source-sans" %in% sysfonts::font_families())) {
@@ -24,7 +29,6 @@ theme_wfa <-
 
     # Apply changes to theme_minimal()
     ggplot2::theme_minimal()+
-    showtext::showtext_opts(dpi = 400)
     ggplot2::theme(
       axis.title = ggplot2::element_text(
         colour = "#5c5c5c",

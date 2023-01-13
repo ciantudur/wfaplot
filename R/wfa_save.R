@@ -10,10 +10,7 @@
 #' name extension takes priority (if present).
 #' @param export_width Override default chart width (inches).
 #' @param export_height Override default chart height (inches).
-#' @param export_res Override default resolution (400dpi). Warning: Changing
-#' this value may impact the scaling of text. Add
-#' 'showtext::showtext_opts(dpi = ##)' to ggplot object before saving to fix
-#' this.
+#' @param export_res Override default resolution (400dpi).
 #' @keywords
 #' save
 #' wfa
@@ -22,20 +19,31 @@
 #' grDevices
 #' magick
 #' ggplot2
+#' showtext
+#' curl
+#' jsonlite
 #' @export
 #' @examples
 #' # Generate ggplot object for use in exammple
 #' df <- data.frame(gp = factor(rep(letters[1:3], each = 10)), y = rnorm(30))
-#' ds <- do.call(rbind, lapply(split(df, df$gp), function(d) {data.frame(
-#'    mean = mean(d$y), sd = sd(d$y), gp = d$gp)}))
-#' plot <- ggplot2::ggplot(df, ggplot2::aes(gp, y)) + ggplot2::geom_point() +
-#'    ggplot2::geom_point(data = ds, ggplot2::aes(y = mean), colour = 'red',
-#'    size = 3)
+#' ds <- do.call(rbind, lapply(split(df, df$gp), function(d) {
+#'   data.frame(
+#'     mean = mean(d$y), sd = sd(d$y), gp = d$gp
+#'   )
+#' }))
+#' plot <- ggplot2::ggplot(df, ggplot2::aes(gp, y)) +
+#'   ggplot2::geom_point() +
+#'   ggplot2::geom_point(
+#'     data = ds, ggplot2::aes(y = mean), colour = "red",
+#'     size = 3
+#'   )
 #' # Save ggplot objects using wfa_save function
 #' wfa_save(plot, "chart.svg")
 #' wfa_save(plot, "chart.png", FALSE)
-#' wfa_save(plot, "chart.tiff", FALSE, export_width = 6,
-#' export_height = 8)
+#' wfa_save(plot, "chart.tiff", FALSE,
+#'   export_width = 6,
+#'   export_height = 8
+#' )
 wfa_save <- function(chart_name,
                      file_name,
                      include_logo = c(F, T),
@@ -43,6 +51,11 @@ wfa_save <- function(chart_name,
                      export_width = NULL,
                      export_height = NULL,
                      export_res = NULL) {
+  if (is.null(export_res) == TRUE) {
+    export_res <- 400
+  } else {}
+  showtext::showtext_opts(dpi = export_res)
+
   if (ggplot2::is.ggplot(chart_name) == FALSE) {
     message("chart_name is not a valid ggplot object")
   } else {
@@ -109,7 +122,6 @@ wfa_save <- function(chart_name,
           )
         )
         magick::image_write(plot_with_logo, as.character(file_name))
-
       } else if (file_type == "jpeg") {
         grDevices::jpeg(as.character(file_name),
           units = "in", width = export_width,
@@ -137,8 +149,7 @@ wfa_save <- function(chart_name,
           )
         )
         magick::image_write(plot_with_logo, as.character(file_name))
-
-            } else if (file_type == "tiff") {
+      } else if (file_type == "tiff") {
         grDevices::tiff(as.character(file_name),
           units = "in", width = export_width,
           height = export_height, res = export_res
@@ -165,7 +176,6 @@ wfa_save <- function(chart_name,
           )
         )
         magick::image_write(plot_with_logo, as.character(file_name))
-
       } else {
         message("Error: Can only export chart with logo as a rasterized file (png, jpeg or tiff)")
       }
@@ -242,5 +252,6 @@ wfa_save <- function(chart_name,
       }
     }
   }
+  showtext::showtext_opts(dpi = 96)
   message("--> Check saved output")
 }
