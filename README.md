@@ -8,7 +8,10 @@
 
 <h3 align="center">wfaplot</h3>
   <p align="center">
-    Create Graphics the WFA Way.
+    Create graphics the WFA way.
+  </p>
+    <p align="center">
+    <a href="https://github.com/ciantudur/wfaplot/raw/main/wfaplot_manual.pdf">Download the PDF manual</a>
   </p>
 </div>
 
@@ -24,8 +27,6 @@ install.packages("remotes")
 
 # Install wfaplot and dependencies from github
 remotes::install_github("ciantudur/wfaplot", dependencies = TRUE)
-
-# If prompted, press Enter to skip updates.
 
 library(wfaplot)
 ```
