@@ -10,7 +10,8 @@
   <p align="center">
     Create graphics the WFA way.
   </p>
-    <p align="center">
+    <p align="center"> 
+    <a href="https://ciantudur.github.io/wfaplot_manual">View the manual online</a> |
     <a href="https://github.com/ciantudur/wfaplot/raw/main/wfaplot_manual.pdf">Download the PDF manual</a>
   </p>
 </div>
