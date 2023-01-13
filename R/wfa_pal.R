@@ -63,8 +63,7 @@ wfa_pal <-
       rampGenerator <- function(colors, ...) {
         ramp <- grDevices::colorRamp(colors, ...)
         function(n) {
-          if (n <= length(colors) &
-            n > 0) {
+          if (n <= length(colors)) {
             colors[1:n]
           } else {
             x <- ramp(seq.int(0, 1, length.out = n))
