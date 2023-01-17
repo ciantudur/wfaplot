@@ -20,7 +20,7 @@
 
 
 ## Installing wfaplot
-To install wfaplot and its dependecies, run the following code in R.
+To install wfaplot and its dependencies, run the following code in R.
 
 ```
 # Install remotes package if not already installed
