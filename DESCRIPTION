@@ -3,7 +3,7 @@ Type: Package
 Title: Create Graphics the WFA Way
 Version: 0.1.0
 Authors@R: 
-    person("Cian", "Sion", , "ciantudur@outlook.com", role = c("aut", "cre"),
+    person("Cian", "Sion", , role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-8409-5654"))
 Description: These functions apply Wales Fiscal Analysis colour palettes and theming to ggplot objects.
 License: GPL-3
