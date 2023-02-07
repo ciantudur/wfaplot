@@ -1,7 +1,7 @@
 Package: wfaplot
 Type: Package
 Title: Create Graphics the WFA Way
-Version: 0.1.0
+Version: 0.3.0
 Authors@R: person("Cian", "Sion", ,email = "sionc1@cardiff.ac.uk", role = c("aut", "cre"))
 Description: These functions apply Wales Fiscal Analysis colour palettes and theming to ggplot objects.
 License: GPL-3
